@@ -1,0 +1,71 @@
+<ion-view hide-nav-bar="true">
+
+<ion-content>
+
+
+    <div class="row">
+        <div class="col">
+            <div class="bar bar-header bar-positiveCustom">
+                <a class="button icon-right ion-chevron-left iconColor" ui-sref="inviteFriend"></a>
+                <h1 class="title title">INVITE BY EMAIL</h1>
+            </div>
+        </div>
+    </div>
+
+<br>
+
+
+    <div class="row">
+        <div class="col">
+
+            <div class="list list-inset" >
+                <label class="item item-input">
+                    <input type="text" placeholder="faran@yh.com" ng-model="inviteFriendByEmail[0]">
+                </label><br/>
+
+                <label class="item item-input">
+                    <input type="text" placeholder="faran@yh.com" ng-model="inviteFriendByEmail[1]">
+                </label><br>
+                <label class="item item-input">
+                    <input type="text" placeholder="faran@yh.com" ng-model="inviteFriendByEmail[2]">
+                </label><br>
+                <label class="item item-input">
+                    <input type="text" placeholder="faran@yh.com" ng-model="inviteFriendByEmail[3]">
+                </label><br>
+                <label class="item item-input">
+                    <input type="text" placeholder="faran@yh.com" ng-model="inviteFriendByEmail[4]">
+                </label>
+            </div>
+
+            </div>
+        </div>
+
+
+
+    <div class="row">
+        <div class="col">
+            <button class="button button-block sendButton" ng-click="inviteFriend()">
+                SEND
+            </button>
+        </div>
+    </div>
+
+
+</ion-content>
+
+</ion-view>
+
+
+<ion-footer-bar class="marginFooter">
+    <div class="button-bar  button-dark">
+        <button class="button button-dark icon ion-compose" ui-sref="aboutUs">
+            About
+        </button>
+        <button class="button button-dark icon ion-document" ui-sref="term&services">
+            Privacy
+        </button>
+        <button class="button button-dark icon ion-document-text" ui-sref="term&services">
+            Terms
+        </button>
+    </div>
+</ion-footer-bar>

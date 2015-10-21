@@ -1,0 +1,80 @@
+<ion-view view-title="PAYPAL LOGIN">
+<ion-content>
+    <div class="row">
+        <div class="col col-34"></div>
+        <div class="col  col-66 text-center">
+            <img src="img/paypal.png" style="width: 100px;margin-top:7%;">
+        </div>
+        <div class="col col-10"></div>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+
+            <div class="list list-inset " >
+                <label class="item item-input fontTextBox">
+                    <input type="text" placeholder="Enter Your UserID" ng-model="loginData.Username">
+                </label><br/>
+
+                <label class="item item-input fontTextBox">
+                    <input type="password" placeholder="Enter your Password" ng-model="loginData.Password">
+                </label>
+            </div>
+
+
+            <li class="item item-checkbox checkboxItem" style="margin:-1%;">
+                <label class="checkbox checkboxItem">
+                    <input type="checkbox">
+                </label>
+                Remember Me
+            </li>
+
+
+            <button class="button button-block signUpButton" type="submit">
+                LOGIN
+            </button>
+        </div>
+    </div>
+
+
+<!--
+<div class="row">
+    <div class="col col-50">
+        <p class="paypalForgot">Forgot Password?</p>
+    </div>
+
+    <div class="col col-50">
+        <p class="paddingLeft">Log in with PIN</p>
+    </div>
+
+</div>
+-->
+    <div class="row">
+        <div class="col">
+            <p class="pC">
+                <a ui-sref="signUp" style="color:black;font-size: 122%;">Forgot Password?</a><br>
+                <a ui-sref="signUp" style="color:darkslategrey;font-size: 122%;"> Log in with PIN</a>
+            </p>
+        </div>
+    </div>
+
+
+</ion-content>
+
+</ion-view>
+
+
+<ion-footer-bar class="marginFooter">
+    <div class="button-bar  button-dark">
+        <button class="button button-dark icon ion-compose" ui-sref="aboutUs">
+            About
+        </button>
+        <button class="button button-dark icon ion-document" ui-sref="term&services">
+            Privacy
+        </button>
+        <button class="button button-dark icon ion-document-text" ui-sref="term&services">
+            Terms
+        </button>
+    </div>
+</ion-footer-bar>

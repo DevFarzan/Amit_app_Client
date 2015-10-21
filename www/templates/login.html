@@ -1,0 +1,92 @@
+<ion-view hide-nav-bar="true">
+    <ion-content class="backgroundImage">
+        <form ng-submit="doLogin()">
+        <div class="customeRow row">
+            <div class="col col-50 padding-0">
+            <button class="button button-dark loginButton">
+                LOGIN
+            </button>
+            </div>
+            <div class="col col-50 padding-0">
+            <button class="button signUpButton" ui-sref="signUp">
+                SIGN UP
+            </button>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col col-90">
+                <img src="img/facebook.png" class="facebookImg" ng-click="login()">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <p class="orLogin">(or)</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+
+                <div class="list list-inset " >
+                    <label class="item item-input fontTextBox">
+                        <input type="text" placeholder="Enter Your UserID" ng-model="loginData.Username">
+                    </label><br/>
+
+                    <label class="item item-input fontTextBox">
+                        <input type="password" placeholder="Enter your Password" ng-model="loginData.Password">
+                    </label>
+                </div>
+
+
+                <li class="item item-checkbox checkboxItem" style="margin:-1%;">
+                    <label class="checkbox checkboxItem">
+                        <input type="checkbox">
+                    </label>
+                    Remember Me
+                </li>
+
+
+                <button class="button button-block signUpButton" type="submit">
+                    LOGIN
+                </button>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <p class="pC">
+                    <a ui-sref="signUp" style="color:black;font-size: 122%;">Don't have an account?</a>
+                    <a ui-sref="signUp" style="color:darkslategrey;font-size: 122%;"> sign up Now!</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="pC">
+            <a href="#" class="anchorLogin" ui-sref="forgetpassword">Forget Password?</a>
+        </div>
+
+</form>
+
+    </ion-content>
+</ion-view>
+<ion-footer-bar class="marginFooter">
+    <div class="button-bar  button-dark">
+        <button class="button button-dark icon ion-compose" ui-sref="aboutUs">
+            About
+        </button>
+        <button class="button button-dark icon ion-document" ui-sref="term&services">
+            Privacy
+        </button>
+        <button class="button button-dark icon ion-document-text" ui-sref="term&services">
+            Terms
+        </button>
+    </div>
+</ion-footer-bar>
+
+

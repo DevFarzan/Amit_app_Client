@@ -1,0 +1,22 @@
+<ion-view hide-nav-bar="true">
+    <ion-content>
+
+        <div class="row">
+            <div class="col">
+                <div class="bar bar-header bar-positiveCustom">
+                    <h1 class="title title">AppUserList</h1>
+                </div>
+            </div>
+        </div>
+<br>
+<br>
+
+   <div ng-repeat="user in userList" ng-click="chatRoom(user)">
+        <ul class="list">
+            <li class="item" >
+                {{user.userName}}
+            </li>
+        </ul>
+   </div>
+        </ion-content>
+    </ion-view>

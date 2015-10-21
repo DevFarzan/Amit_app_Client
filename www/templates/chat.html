@@ -1,0 +1,41 @@
+<ion-view view-title="CHAT">
+<ion-content>
+        <div ng-repeat="chat in chatMessageArray track by $index">
+            <span class="row" ng-if="chatMessageArray[$index-1].date!=chat.date">
+                <p class="col"></p>
+                <p class="col-50" style="  text-align: center;color:#8b9294;font-family: cursive;font-weight: bold;background-color: #dbf3fd;max-width: 30%;height: 24px;">{{chat.date}}</p>
+                <p class="col"></p>
+             </span>
+          <div class="bubble2" ng-if="chat.author == currentUser">
+                <span class="personSay2">{{chat.message}}</span>
+                <span class="timeCustom">{{chat.time}}</span>
+          </div>
+          <div class="bubble" ng-if="chat.author == userFriend">
+                <span class="personSay1">{{chat.message}}</span>
+                <span class="timeCustom">{{chat.time}}</span>
+           </div>
+        </div>
+</ion-content>
+</ion-view>
+<!--
+<ion-footer-bar class="footerBackground">
+    <div class="row">
+        <div class="col col-80">
+            <label class="">
+                <input type="text" placeholder="Type Here" style="width:100%;margin-top:-3%;" ng-model="chatmessage">
+            </label>
+        </div>
+        <div class="col col-20">
+            &lt;!&ndash; <p class="ion-android-send" style="font-size:208%;color: #aaaaaa;"></p>&ndash;&gt;
+            <button class="button buttonblock" ng-click="chatMesage()">Send</button>
+        </div>
+    </div>
+</ion-footer-bar>-->
+<ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
+    <label class="item-input-wrapper">
+        <input type="text" placeholder="Type your message" ng-model="chatmessage">
+    </label>
+    <button class="button button-clear" ng-click="chatMesage()">
+        Send
+    </button>
+</ion-footer-bar>

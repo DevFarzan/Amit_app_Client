@@ -1,0 +1,56 @@
+<ion-view hide-nav-bar="true">
+    <ion-content>
+
+ <form>
+        <div class="row">
+            <div class="col">
+                <div class="bar bar-header bar-positiveCustom">
+                    <a class="button icon-right ion-chevron-left iconColor" ng-click="popUp()"></a>
+                    <h3 class="title title">VERIFY CODE</h3>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Enter Verification code here" ng-model="userCode.verifyCode">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button class=" button buttonVerify" ng-click="verifyCode()">
+                   VERIFY
+                </button>
+            </div>
+
+            <div class="col col-50">
+                <button class="button buttondark">
+                   RESEND
+                </button>
+            </div>
+        </div>
+ </form>
+
+    </ion-content>
+</ion-view>
+
+<ion-footer-bar class="marginFooter">
+    <div class="button-bar  button-dark">
+        <button class="button button-dark icon ion-compose" ui-sref="aboutUs">
+            About
+        </button>
+        <button class="button button-dark icon ion-document" ui-sref="term&services">
+            Privacy
+        </button>
+        <button class="button button-dark icon ion-document-text" ui-sref="term&services">
+            Terms
+        </button>
+    </div>
+</ion-footer-bar>

@@ -1,0 +1,86 @@
+<ion-view view-title="CARD DETAILS">
+
+    <ion-content>
+
+        <div class="row">
+            <div class="col">
+                <!--<div class="paypaldiv">pay Rs.500 to Chat app</div>-->
+                <div class="list list-inset">
+                    <label class="item item-input paypaldiv ion-ios-locked">
+                        <input type="text" value="Pay Rs.500 to Chat app" readonly>
+                    </label>
+                    <img src="img/cards.jpg" class="paypalcards">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col">
+                <div class="list list-inset">
+                    <p class="colorP">Card Number</p>
+                    <label class="item item-input">
+
+                        <input type="text" placeholder="Enter card number">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+
+                <div class="list list-inset">
+                    <p class="colorP">Expiration Date</p>
+                    <label class="item item-input">
+                        <input type="datetime-local" placeholder="Enter card number">
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col col-80">
+
+                <div class="list list-inset">
+                    <p class="colorP">CW Code</p>
+                    <label class="item item-input">
+                        <input type="text">
+                    </label>
+                </div>
+                    </div>
+                <div class="col col-20" style="margin-top: 18%;font-size: 178%;color: #e2dfdf;">
+                    <p class="ion-help"></p>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button class="button button-block payButton">
+                    PAY NOW
+                </button>
+            </div>
+        </div>
+
+    </ion-content>
+
+</ion-view>
+
+
+<ion-footer-bar class="marginFooter">
+    <div class="button-bar  button-dark">
+        <button class="button button-dark icon ion-compose" ui-sref="aboutUs">
+            About
+        </button>
+        <button class="button button-dark icon ion-document" ui-sref="term&services">
+            Privacy
+        </button>
+        <button class="button button-dark icon ion-document-text" ui-sref="term&services">
+            Terms
+        </button>
+    </div>
+</ion-footer-bar>

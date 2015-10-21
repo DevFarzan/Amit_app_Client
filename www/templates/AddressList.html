@@ -1,0 +1,77 @@
+<ion-view view-title="ADDRESS LIST">
+
+<ion-content>
+
+
+    <div class="row row-center">
+        <div class="col col-33"></div>
+        <div class="col col-66">
+            <a class="button button-icon icon ion-ios-plus-empty iconplus"></a>
+            <button class="button addressList">
+                ADD NEW
+            </button>
+        </div>
+    </div>
+
+
+
+    <div class="item ion-chevron-right" ng-click="showTextBox()">
+        Alias Name
+    </div><br>
+
+    <div class="list list-inset" ng-show="showTextField">
+        <label class="item item-input fontTextBox">
+            <input type="text" placeholder="Alias Name" ng-model="userAddress.aliasName">
+        </label><br>
+
+        <label class="item item-input fontTextBox">
+            <input type="text" placeholder="Area" ng-model="userAddress.area">
+        </label><br>
+
+        <label class="item item-input fontTextBox">
+            <input type="text" placeholder="Address 1" ng-model="userAddress.address1">
+        </label><br>
+
+        <label class="item item-input fontTextBox">
+            <input type="text" placeholder="Address 2" ng-model="userAddress.address2">
+        </label><br>
+
+        <label class="item item-input fontTextBox">
+            <input type="text" placeholder="Address 3" ng-model="userAddress.address3">
+        </label><br>
+
+        <label class="item item-input fontTextBox">
+            <input type="text" placeholder="Zip Code" ng-model="userAddress.zipCode">
+        </label>
+
+        <div class="row">
+            <div class="col col-50">
+                <button class="button button-large buttonSave" ng-click="addressList()">
+                  SAVE
+                </button>
+             </div>
+            <div class="col col-50">
+                <button class="button button-large buttonSkip">
+                 SKIP
+                </button>
+            </div>
+        </div>
+
+        </div>
+
+</ion-content>
+</ion-view>
+
+<ion-footer-bar class="marginFooter">
+    <div class="button-bar  button-dark">
+        <button class="button button-dark icon ion-compose" ui-sref="aboutUs">
+            About
+        </button>
+        <button class="button button-dark icon ion-document" ui-sref="term&services">
+            Privacy
+        </button>
+        <button class="button button-dark icon ion-document-text" ui-sref="term&services">
+            Terms
+        </button>
+    </div>
+</ion-footer-bar>

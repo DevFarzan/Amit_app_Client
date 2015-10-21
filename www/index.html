@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <script src="lib/socket.io-1.3.7.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <script src="js/ng-cordova.min.js"></script>
+    <script src="../plugins/phonegap-facebook-plugin/facebookConnectPlugin.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+
+    <!--controller script link   -->
+
+    <script src="js/controller/loginController.js"></script>
+    <script src="js/controller/logoutController.js"></script>
+    <script src="js/controller/signUpController.js"></script>
+    <script src="js/controller/profileController.js"></script>
+    <script src="js/controller/forgotPasswordController.js"></script>
+    <script src="js/controller/changePasswordController.js"></script>
+    <script src="js/controller/resetPasswordController.js"></script>
+    <script src="js/controller/listUserController.js"></script>
+    <script src="js/controller/verifyCodeController.js"></script>
+    <script src="js/controller/addressListController.js"></script>
+    <script src="js/controller/chatController.js"></script>
+    <script src="js/controller/appUserListController.js"></script>
+    <script src="js/controller/inviteFriendController.js"></script>
+
+    <script src="lib/thirdParty/cookies.min.js"></script>
+    <script src="js/Service/loginService.js"></script>
+
+</head>
+<body ng-app="chatAppModule">
+
+<ion-side-menus enable-menu-with-back-views="true"  ng-controller="loginController">
+
+
+    <ion-side-menu-content drag-content="false">
+        <ion-nav-bar class="navbar" >
+
+
+            <ion-nav-buttons side="left">
+                <button class="naviconcolor button button-icon ion-navicon"  menu-toggle="left"></button>
+            </ion-nav-buttons>
+
+            <ion-nav-buttons side="right">
+                <button class="indexLogOff " ng-click="logout()">
+                    LOG OFF
+                </button>
+            </ion-nav-buttons>
+
+        </ion-nav-bar>
+
+        <ion-nav-view name="menuContent"></ion-nav-view>
+        <ion-nav-view animation="slide-left-right">
+        </ion-nav-view>
+
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+        <ion-header-bar class="sideBar">
+        </ion-header-bar>
+
+        <ion-content>
+            <div class="row">
+                <div class="col">
+                    <h5 class="h4Sidebar">{{username.toUpperCase()}}</h5>
+                    <p class="pstateSidbar">{{userLocation.toUpperCase()}}</p>
+                </div>
+            </div>
+            <div class="row item" menu-close>
+                <div class="col col-20">
+                    <img src="img/sideBarChaticon.png" class="sidebarchatIcon">
+                </div>
+                <div class="chat-text-padding-top col col-80" ui-sref="chat">
+                    <p class="sidebarColor">CHAT</p>
+                </div>
+            </div>
+            <div class="row item" menu-close>
+                <div class="col col-20">
+                    <img src="img/profileIcon.png" class="side-bar-profile">
+                </div>
+                <div class="profile-text-padding-top col col-80" ui-sref="Profile">
+                    <p class="sidebarColor">MY PROFILE</p>
+                </div>
+            </div>
+            <div class="row item" menu-close>
+                <div class="padding-top-addressIcon col col-20">
+                    <img src="img/AddresslistIcon.png" class="sidebarAddresssList">
+                </div>
+                <div class="padding-top-address-Text col col-80" ui-sref="addressList">
+                    <p class="sidebarColor">MY ADDRESS LIST</p>
+                </div>
+            </div>
+            <div class="row item" menu-close>
+                <div class="padding-top-resetIcon col col-20">
+                    <img src="img/changePassword.png" class="reset-password-icon">
+                </div>
+                <div class="padding-top-resetText col col-80" ui-sref="resetPassword">
+                    <p class="sidebarColor">RESET Password</p>
+                </div>
+            </div>
+            <div class="row item" menu-close>
+                <div class="col col-20">
+                    <p class="ion-ios-people" style="font-size: 200%; margin-left: 18%;"></p>
+                </div>
+                <div class="padding-top-inviteFriend-text col col-80" ui-sref="inviteFriend" >
+                    <p class="sidebarColor">INVITE FRIEND</p>
+                </div>
+            </div>
+            <div class="row item" menu-close>
+                <div class="col col-20">
+                    <img src="img/accountbalance.png" class="side-bar-account-Icon">
+                </div>
+                <div class="padding-top-account-text col col-80" ui-sref="paypal">
+                    <p class="sidebarColor">ACOUNT BALANCE</p>
+                </div>
+            </div>
+            <div class="row item" menu-close ng-click="logout()">
+                <div class="col col-20">
+                    <img src="img/signout.png" class="sidebarlogofficon">
+                </div>
+                <div class="padding-top-logoff-text col col-80">
+                    <p class="sidebarColor">SIGNOUT</p>
+                </div>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
+
+<div id="fb-root"></div>
+
+
+<script src="lib/facebookConnectPlugin.js"></script>
+</body>
+</html>

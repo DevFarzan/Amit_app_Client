@@ -1,0 +1,109 @@
+<ion-view hide-nav-bar="true" >
+    <ion-content>
+
+        <div class="row">
+            <div class="col">
+                <div class="bar bar-header bar-positiveCustom">
+                    <a class="button icon-right ion-chevron-left iconColor" ng-click="historyFunction()"></a>
+                    <h1 class="title title">Profile</h1>
+                </div>
+            </div>
+        </div>
+
+
+                <div class="card">
+                    <div class="margin-top-profile-card item item-text-wrap">
+                        <form>
+                            <div class="row padding">
+                                <div class="col col-25" style="height:150px" ><i class="ion-camera" style="font-size:30px" ng-click="addImage()"></i> </div>
+                                <div class="col col-50" style="height:150px; width:150px; border: 1px dotted blue">
+
+                                    <img id="myImage" ng-src="{{image.src}}" style="height:100%;width:100%">
+                                </div>
+                                <div class="col col-25 col-offset-10" ng-click="browseImages()">
+                                    <i class="ion-images" style="font-size:30px"></i>
+
+                                </div>
+                            </div>
+
+                            <div class="list">
+                                <label class="item item-input">
+                                    <span class="input-label">Username</span>
+                                    <input type="text" placeholder="userName"  ng-model="$parent.userNewName">
+                                </label>
+                                <label class="item item-input">
+                                    <span class="input-label">Email</span>
+                                    <input type="text" placeholder="userEmail"  ng-model="$parent.Email">
+                                    <i type="icon" style="icon-right:ion-locked"></i>
+                                </label>
+                                <label class="item item-input">
+                                    <span class="input-label">Gender</span>
+                                    <input type="text" placeholder="Your Gender"  ng-model="$parent.Gender">
+                                </label>
+                                <label class="item item-input">
+                                    <span class="input-label">PhoneNumber</span>
+                                    <input type="text" placeholder="Your number"  ng-model="$parent.number">
+                                </label>
+                                <label class="item item-input" ng-click="resetLink()">
+                                <span class="input-label">Reset Password</span>
+                                <a href="#" >Reset Password</a>
+                                </label>
+                                <label>
+                                    <button class="button button-block sendButton" ng-click="updateProfile()">
+                                        Update Profile Data
+                                    </button>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+        <script id="templates/modal.html" type="text/ng-template">
+            <ion-modal-view>
+                <ion-header-bar class="bar bar-header bar-positive">
+                    <h1 class="title">Profile Pictures</h1>
+                    <button class="button button-clear button-primary" ng-click="closeModal()">Cancel</button>
+                </ion-header-bar>
+                <ion-content class="padding">
+
+
+                    <div ng-repeat="userImages in aImages">
+
+
+                        <div class="col col-50" style="height:150px; width:150px; border: 2px dotted black">
+
+                            <img id="myImage" ng-src="{{userImages.src}}" style="height:100%;width:100%" ng-click="setProfilePic($index)">
+                        </div>
+
+                    </div>
+
+
+                </ion-content>
+            </ion-modal-view>
+        </script>
+
+
+    </ion-content>
+</ion-view>
+
+
+<ion-footer-bar class="marginFooter">
+    <div class="button-bar  button-dark">
+        <button class="button button-dark icon ion-compose" ui-sref="aboutUs">
+            About
+        </button>
+        <button class="button button-dark icon ion-document" ui-sref="term&services">
+            Privacy
+        </button>
+        <button class="button button-dark icon ion-document-text" ui-sref="term&services">
+            Terms
+        </button>
+    </div>
+</ion-footer-bar>

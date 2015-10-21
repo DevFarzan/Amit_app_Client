@@ -1,0 +1,164 @@
+<!--
+<ion-header-bar>
+    <h1 class="title">SignUp</h1>
+</ion-header-bar>
+<ion-content>
+    <form ng-submit="signUpUser()">
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">Username</span>
+                <input type="text" ng-model="signUpData.userName" required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Email</span>
+                <input type="text" ng-model="signUpData.email" required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" ng-model="signUpData.password" required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">PhoneNumber</span>
+                <input type="text" ng-model="signUpData.PhoneNumber" required>
+            </label>
+            <div class="list">
+
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Gender
+                    </div>
+                    <select ng-model="signUpData.gender">
+                        <option>Male</option>
+                        <option selected>Female</option>
+                    </select>
+                </label>
+            </div>
+
+            <label class="item">
+                <button class="button button-block button-positive" type="submit">SignUp</button>
+            </label>
+        </div>
+    </form>
+</ion-content>
+-->
+<ion-view hide-nav-bar="true">
+
+    <div class="bar bar-header bar-dark">
+        <a class="button icon-right ion-chevron-left iconColor" ui-sref="login"></a>
+        <h1 class="title">SIGN UP</h1>
+    </div>
+
+    <ion-content class="contentMargin">
+
+        <form ng-submit="signUpUser()">
+
+            <div class="row">
+                <div class="col">
+
+                    <div class="list list-inset">
+                        <label class="item item-input fontTextSignUp">
+                            <input type="text" placeholder="Name" ng-model="signUpData.userName" ng-Required>
+                        </label><br>
+
+                        <div class="validationMsg">
+                            <p ng-show="usernameEmpty">This field is required</p>
+                            <p ng-show="usernameGreater">This field must be less than 20 characters</p>
+                            <p ng-show="usernameGreaterThanFive">This field must be greater than 5 characters</p>
+                        </div>
+
+
+                        <label class="item item-input fontTextSignUp">
+                            <input type="text" placeholder="Email" ng-model="signUpData.email" ng-Required>
+
+                        </label><br>
+
+
+                        <div class="validationMsg">
+                            <p ng-show="emailValid">Email is not valid</p>
+                        </div>
+
+                        <label class="item item-input fontTextSignUp">
+                            <input type="password" placeholder="Password" ng-model="signUpData.password" ng-Required>
+                        </label><br>
+
+
+                        <div class="validationMsg">
+                            <p ng-show="passwordEmpty">This field is required</p>
+                            <p ng-show="passwordGreater">This field must be atleast 8 characters</p>
+                            <p ng-show="passwordGreaterThanFive">This field must be greater than 8 characters</p>
+                            <p ng-show="passwordAlphanumeric">Password must be 1 character or 1 number</p>
+                        </div>
+
+
+                        <label class="item item-input fontTextSignUp">
+                            <input type="text" placeholder="PhoneNumber" ng-keypress='validate($event)'  ng-model="signUpData.PhoneNumber" ng-required maxlength="11">
+                        </label><br>
+
+
+                        <div class="list">
+
+                            <label class="item item-input item-select">
+                                <div class="input-label">
+                                    Gender
+                                </div>
+                                <select ng-model="signUpData.gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </label>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="col margin-signup-col-check">
+                        <li style="display: inline-block; vertical-align: top;">
+                            <label class="checkbox checkboxItem" >
+                                <input type="checkbox" style="display: inline-block">
+                            </label>
+                        </li>
+                        <div class=" col col-80 inline" >
+                            By registering you confirm that you accept the
+                            <a href="" class="anchorSignup" ng-click="termServices()">Term and Condition</a> and <a href="#" class="anchorSignup" ng-click="termServices()">Privacy Policy</a>
+                        </div>
+                    </div>
+
+                    <button class="button button-block signUpButtonC" type="submit">
+                        SIGNUP NOW!
+                    </button>
+                    <div class="pCC">
+                        <p class="">
+                            Already have account?<span ui-sref="login">Login Now!</span>
+                        </p>
+                    </div>
+                    <p ui-sref="verifyCode" class="pCC">
+                        <a href="#">Already have registration code? Confirm now!</a>
+                    </p>
+
+                </div>
+            </div>
+        </form>
+
+    </ion-content>
+</ion-view>
+
+
+<ion-footer-bar class="marginFooter">
+
+    <div class="button-bar  button-dark">
+        <button class="button button-dark icon ion-compose"  ui-sref="aboutUs">
+            About
+        </button>
+
+        <button class="button button-dark icon ion-document" ui-sref="term&services">
+
+            Privacy
+        </button>
+        <button class="button button-dark icon ion-document-text" ui-sref="term&services">
+
+            Terms</button>
+    </div>
+</ion-footer-bar>
