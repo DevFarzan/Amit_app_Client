@@ -24,5 +24,7 @@
     "org.apache.cordova.geolocation",
     "cordova-plugin-camera"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [
+    "android"
+  ]
 }

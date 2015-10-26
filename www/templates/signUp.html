@@ -1,46 +1,3 @@
-<!--
-<ion-header-bar>
-    <h1 class="title">SignUp</h1>
-</ion-header-bar>
-<ion-content>
-    <form ng-submit="signUpUser()">
-        <div class="list">
-            <label class="item item-input">
-                <span class="input-label">Username</span>
-                <input type="text" ng-model="signUpData.userName" required>
-            </label>
-            <label class="item item-input">
-                <span class="input-label">Email</span>
-                <input type="text" ng-model="signUpData.email" required>
-            </label>
-            <label class="item item-input">
-                <span class="input-label">Password</span>
-                <input type="password" ng-model="signUpData.password" required>
-            </label>
-            <label class="item item-input">
-                <span class="input-label">PhoneNumber</span>
-                <input type="text" ng-model="signUpData.PhoneNumber" required>
-            </label>
-            <div class="list">
-
-                <label class="item item-input item-select">
-                    <div class="input-label">
-                        Gender
-                    </div>
-                    <select ng-model="signUpData.gender">
-                        <option>Male</option>
-                        <option selected>Female</option>
-                    </select>
-                </label>
-            </div>
-
-            <label class="item">
-                <button class="button button-block button-positive" type="submit">SignUp</button>
-            </label>
-        </div>
-    </form>
-</ion-content>
--->
 <ion-view hide-nav-bar="true">
 
     <div class="bar bar-header bar-dark">
@@ -60,10 +17,10 @@
                             <input type="text" placeholder="Name" ng-model="signUpData.userName" ng-Required>
                         </label><br>
 
-                        <div class="validationMsg">
+                        <div class="validationMsg font_validation">
                             <p ng-show="usernameEmpty">This field is required</p>
                             <p ng-show="usernameGreater">This field must be less than 20 characters</p>
-                            <p ng-show="usernameGreaterThanFive">This field must be greater than 5 characters</p>
+                            <p ng-show="usernameGreaterThanFive">Please enter your full name</p>
                         </div>
 
 
@@ -82,7 +39,7 @@
                         </label><br>
 
 
-                        <div class="validationMsg">
+                        <div class="validationMsg font_validation">
                             <p ng-show="passwordEmpty">This field is required</p>
                             <p ng-show="passwordGreater">This field must be atleast 8 characters</p>
                             <p ng-show="passwordGreaterThanFive">This field must be greater than 8 characters</p>
@@ -102,7 +59,7 @@
                                     Gender
                                 </div>
                                 <select ng-model="signUpData.gender">
-                                    <option>Male</option>
+                                    <option vlaue="Male">Male</option>
                                     <option>Female</option>
                                 </select>
                             </label>

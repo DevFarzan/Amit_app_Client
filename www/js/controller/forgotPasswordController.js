@@ -19,7 +19,7 @@ chatAppModule.controller('forgotPasswordController',function($scope,$state,$http
         $scope.recoverEmail={};
 
         $ionicPopup.alert({
-            templateUrl:'We Have send a verification Code to your email kindly check It Thanks!'
+            template:'We Have send a verification Code to your email kindly check It Thanks!'
         });
     };
 });

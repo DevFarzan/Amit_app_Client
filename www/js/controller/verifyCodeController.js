@@ -1,4 +1,4 @@
-chatAppModule.controller('verifyCodeController',function($scope,$http,$state,myConfig,$ionicPopup){
+chatAppModule.controller('verifyCodeController',function($scope,$http,$state,myConfig,$ionicPopup,$ionicLoading){
     var show = function() {
         $ionicLoading.show({
             template:'<div class="spinner">'+

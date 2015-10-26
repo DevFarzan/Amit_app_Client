@@ -1,4 +1,4 @@
-chatAppModule.controller('loginController',function($scope,$state,$http,$ionicPopup,$ionicSideMenuDelegate,myConfig,$rootScope,$cordovaOauth,Login,$ionicLoading) {
+chatAppModule.controller('loginController',function($scope,$cordovaToast,$state,$http,$ionicPopup,$ionicSideMenuDelegate,myConfig,$rootScope,$cordovaOauth,Login,$ionicLoading) {
 
 
     $scope.usernameID = '';
@@ -28,9 +28,19 @@ chatAppModule.controller('loginController',function($scope,$state,$http,$ionicPo
         $ionicLoading.hide();
     };
 
+     var showToast = function(message, duration, location) {
+        $cordovaToast.show(message, duration, location).then(function(success) {
+            console.log("The toast was shown");
+        }, function (error) {
+            console.log("The toast was not shown due to " + error);
+        });
+    }
+
     //local Own login
 
     $scope.doLogin = function () {
+
+
 
         if ($scope.loginData.Username  &&  $scope.loginData.Password  ) {
             show();
@@ -107,10 +117,11 @@ chatAppModule.controller('loginController',function($scope,$state,$http,$ionicPo
 
 
         }
-        else{
-            $ionicPopup.alert({
-                template:'Fill the fields first'
-            });
+        else {
+            /* $ionicLoading.show({ template: '<div class="Toaster_C">Fill the Field!</div>', noBackdrop: false, duration: 1000 });*/
+            if (window.cordova) {
+                showToast('Please enter username and password to login', 'short', 'center');
+            }
         }
     };
 
@@ -194,5 +205,4 @@ chatAppModule.controller('loginController',function($scope,$state,$http,$ionicPo
         localStorage.clear();
         $state.go('login');
     };
-
 });

@@ -686,3 +686,16 @@ label.item.valid-lr {
            -webkit-transform: scaleY(1.0);
        }
 }
+.Toaster_C{
+    background-color: black;
+    width: 131px;
+    border-radius: 6px;
+    height: 30px;
+    text-align: center;
+    margin-top: 59px;
+    font-family: monospace;
+}
+.font_validation p{
+    font-size: large;
+    font-family: "Open Sans"
+}

@@ -1,6 +1,6 @@
 <ion-view hide-nav-bar="true">
     <ion-content class="backgroundImage">
-        <form ng-submit="doLogin()">
+        <form>
         <div class="customeRow row">
             <div class="col col-50 padding-0">
             <button class="button button-dark loginButton">
@@ -51,7 +51,7 @@
                 </li>
 
 
-                <button class="button button-block signUpButton" type="submit">
+                <button class="button button-block signUpButton" type="submit" ng-click="doLogin()">
                     LOGIN
                 </button>
             </div>
